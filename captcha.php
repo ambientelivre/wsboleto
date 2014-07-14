@@ -1,4 +1,4 @@
-<?php
+<?php  //Marcio
 session_start();
 $code=rand(1000,99999);
 $_SESSION["code"]=$code;
