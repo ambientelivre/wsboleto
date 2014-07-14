@@ -1,0 +1,306 @@
+/* 
+    Document   : style
+    Created on : May 26, 2014, 8:55:15 AM
+    Author     : Diego Richalski
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    background: #EDECEC;
+}
+
+h1{
+    font: bold 22px/14px 'Arial';
+    color: #444;
+}
+
+h2{
+    font: bold 16px/14px 'Arial';
+    color: #444;
+}
+
+p{
+    font: normal 18px/24px 'Arial';
+    color: #444;
+}
+
+#container{
+    width: 970px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+#h_wrapper{
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+#wrapper{
+    width: 910px;
+    height: 100px;
+    margin: 0 auto;
+    background: url(http://www.ambientelivre.com.br/ws_cdc/lib/imagens/header-bg-alpha-radialgradient.png) #000 no-repeat center;
+    padding: 35px 15px;
+}
+
+#wrapper img{
+    float: left;
+}
+
+#h_busca_boleto{
+    float: right;
+    overflow: hidden;
+}
+
+#h_busca_boleto p{
+    color: #F7893C;
+    font: normal 20px/18px 'Arial';
+}
+
+#msg_error{
+    width: 926px;
+    padding: 15px 5px;
+    background: #F99696;
+    border: #ff0000 2px solid;
+    float: left;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+#msg_error p{
+    font: 40px/10px 'Arial';
+    color: #000000;
+}
+
+#fechar{
+    margin: 5px 15px;
+    float: right;
+    background: #ccc;
+    border: 2px solid #aaa;
+    padding: 5px 10px;
+    font: normal 20px 'Arial';
+    
+    border-radius: 5px;
+}
+
+a{
+    color: #F02626;
+    text-decoration: none;
+}
+
+table{
+    margin: 0 auto 0 39px;
+    font: normal 20px 'Arial';
+    overflow: visible;
+    width: 895px;
+    /*position: absolute;*/
+    /*z-index: 1;*/
+}
+
+.tbi tbody{
+    overflow: visible;
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.tbi{
+    margin: 0 auto;
+}
+
+tbody{
+    overflow: visible;
+    z-index: 1;
+}
+
+table th{
+    color: #EC4B4B;
+    padding: 5px 10px;
+    /*background: #000;*/
+    
+}
+
+.fixed{
+    float: left;
+    position: fixed;
+    
+}
+
+#container table td{
+    text-align: center;
+    padding: 5px 10px;
+    color: #444;
+    background: #dfdfdf;
+    /*background: #eee;*/
+    
+}
+
+#container table td p{
+    margin: 5px 0 0 0;
+    
+}
+
+#container table td img{
+    width: 35px;
+    height: 35px;
+    /*float: left;*/
+    /*margin: -20px -10px 0 10px;*/
+    padding: 0;
+    left: 50%;
+    
+}
+
+#container table td span{
+    width: 120px;
+    float: left;
+    font: normal 16px 'Arial';
+    color: #444;
+    
+}
+
+#cab_ul{
+    background: cyan;
+}
+
+.novo_vencimento{
+    width: 113px;
+    padding: 2px;
+    font: normal 20px 'Arial';
+    
+}
+
+.input_error{
+    border: #ff0000 solid 1px;
+    background: #cdcdcd;
+    border-radius: 5px;
+}
+
+.gerar_boleto{
+    width: 91%;
+    overflow: hidden;
+    float: left;
+    background: #a9a9a9;
+    /*background: #F7893C;*/
+    font: normal 18px 'Arial';
+    color: #000;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.icn_banco{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        alignment-adjust: central;
+    } 
+    
+#basehome{
+    width: 975px;
+    height: 283px;
+    background: url(http://www.ambientelivre.com.br/ws_cdc/lib/imagens/print_modelo_estrutura_jun14.png) no-repeat;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 50px 0 0 0;
+}
+
+#basehome_result{
+    width: 940px;
+    min-height: 40px;
+    max-height: 330px;
+    /*background: url(lib/imagens/basehome_result.png) no-repeat top;*/
+    position: relative;
+    z-index: 2;
+    padding: 0px 0 20px 0;
+    overflow-y: auto;
+}
+
+#bg_result{
+    width: 970px;
+    height: 450px;
+    background: url(lib/imagens/basehome_result.png) no-repeat top;    
+    /*float: left;*/
+    padding: 30px 0;
+    position: relative;
+    margin: 0 auto;
+    z-index: 4;
+    
+}
+
+#footer{
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    border-top: 2px #F7893C solid;
+    position: relative;
+    z-index: 1;
+    margin: -60px auto;
+}
+
+#logo_footer{
+    width: 360px;
+    margin: 50px auto 0;
+    overflow: hidden;
+
+}
+
+#h_form{
+    width: 380px;
+    height: 220px;
+    overflow: hidden;
+    margin: 0 auto 0 auto;
+    background: #EDECEC;
+    padding: 30px 0 0 150px;
+    border-radius: 15px;
+}
+
+#h_form form{
+    width: 225px;
+    height: 175px;
+    overflow: hidden;
+    float: left;
+}
+
+#h_form form input{
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    
+}
+
+.info_esc{
+ font: normal 10px 'Arial';
+ color: red;
+}
+
+#h_result{
+    width: 895px;
+    /*height: 90px;*/
+    /*background: red;*/
+    padding: 0 10px;
+    float: left;
+    /*position: fixed;*/
+    overflow: hidden;
+    margin: 0 0 0 30px;
+    
+}
+
+.m_result{ 
+    background: black; 
+    height: 33px; 
+    float: left; 
+    margin: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px 0 0 0;
+    font: normal 18px 'Arial';
+    color: #F7893C;
+}
