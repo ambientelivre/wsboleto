@@ -1,4 +1,4 @@
-<?php  //Marcio2
+<?php 
 session_start();
 $code=rand(1000,99999);
 $_SESSION["code"]=$code;
@@ -11,5 +11,4 @@ header("Cache-Control: no-cache, must-revalidate");
 header('Content-type: image/png');
 imagepng($im);
 imagedestroy($im);
-//DIEGO2
 ?>
