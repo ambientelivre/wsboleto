@@ -50,7 +50,7 @@ $dadosboleto["data_processamento"] = date("d/m/Y"); // Data de processamento do 
 $dadosboleto["valor_boleto"] = $_SESSION['valor']; 	// Valor do Boleto - REGRA: Com v�rgula e sempre com duas casas depois da virgula
 
 // DADOS DO SEU CLIENTE
-$dadosboleto["sacado"] = $_SESSION['sacado'];
+$dadosboleto["sacado"] = $_SESSION['sacado'] . ' ' . $_SESSION['CNPJ'];
 $dadosboleto["endereco1"] = $_SESSION['endereco'];
 //$dadosboleto["endereco2"] = $_REQUEST['endereco_2_cliente'];
 $dadosboleto["endereco2"] = $_SESSION['municipio'] . " - ".  $_SESSION['uf'] . " - CEP: ". $_SESSION['cep'];
@@ -81,7 +81,8 @@ $dadosboleto["conta"] = "18098";	// Num da conta, sem digito
 $dadosboleto["conta_dv"] = "5"; 	// Digito do Num da conta
 
 // DADOS PERSONALIZADOS - ITA�
-$dadosboleto["carteira"] = "175";  // C�digo da Carteira: pode ser 175, 174, 104, 109, 178, ou 157
+//$dadosboleto["carteira"] = "175";  // C�digo da Carteira: pode ser 175, 174, 104, 109, 178, ou 157
+$dadosboleto["carteira"] = "181";  // C�digo da Carteira: pode ser 175, 174, 104, 109, 178, ou 157
 
 // SEUS DADOS
 //$dadosboleto["identificacao"] = "BoletoPhp - Codigo Aberto de Sistema de Boletos";

@@ -61,10 +61,6 @@
     
                 $raiz = substr($lista[0]['id'],0,-2);
                 
-                echo '<pre>==> ';
-                print_r($raiz);
-                echo '</pre> <==';
-
             $i=0;
                 foreach ($lista as $boletos){  ?>
                 
@@ -99,7 +95,7 @@
                                     if($vencimento['vencido'] == true && $vencimento['limite_execedido'] != TRUE){ ?>
 
                                 <input type="hidden" id="dt_limite_<?php echo $i; ?>" class="dt_limite" value="<?php echo $vencimento['dt_limite']; ?>">
-                                    <input type="text" id="novo_vencimento_<?php echo $i; ?>" name="novo_vencimento" class="novo_vencimento" value="">
+                                    <input type="text" id="novo_vencimento_<?php echo $i; ?>" name="novo_vencimento" class="novo_vencimento" value="<?php echo $boletos['vencimento']?>">
                                     <input type="hidden" id="h_novo_vencimento_<?php echo $i; ?>" class="h_novo_vencimento" value="">
 
                                     <?php } else{ ?>

@@ -12,7 +12,7 @@ if($acao == '' && $acao != 'consultaBoleto' && $acao != 'linkBoleto'){
 }else{
 
     $consulta = $client->consultaBoleto($arr_lcto);
-    
+        
     if($consulta != null){
 
         $_SESSION['numerodocumento'] = $consulta->numerodocumento;

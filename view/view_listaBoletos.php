@@ -106,11 +106,17 @@
                                             <input type="hidden" id="dt_limite_<?php echo $i; ?>" class="dt_limite" value="<?php echo $vencimento['dt_limite']; ?>">
                                             <input type="hidden" id="limite_excedido" name="limite_excedido" value="<?php echo $vencimento['limite_execedido']; ?>">
                                             <input type="text" id="novo_vencimento_<?php echo $i; ?>" name="novo_vencimento" class="novo_vencimento" value="<?php echo date('d/m/Y'); ?>">
+                                            
 
+                                        <?php } else if($vencimento['vencido'] == true ){ ?>
+                                                <input type="text" disabled id="novo_vencimento_<?php echo $i; ?>" name="novo_vencimento" class="novo_vencimento" value="<?php echo date('d/m/Y'); ?>">
+                                                <input type="hidden" id="novo_vencimento_<?php echo $i; ?>" name="novo_vencimento" class="novo_vencimento" value="<?php echo date('d/m/Y'); ?>">
                                         <?php } else { ?>
-                                                    
-                                            <input type="text" disabled id="novo_vencimento_<?php echo $i; ?>" name="novo_vencimento" class="novo_vencimento" value="<?php echo date('d/m/Y'); ?>">
-                                            <input type="hidden" id="novo_vencimento_<?php echo $i; ?>" name="novo_vencimento" class="novo_vencimento" value="<?php echo date('d/m/Y'); ?>">
+                                            
+                                                <input type="text" disabled id="novo_vencimento_<?php echo $i; ?>" name="novo_vencimento" class="novo_vencimento" value="<?php echo $boletos->vencimento; ?>">
+                                                <input type="hidden" id="novo_vencimento_<?php echo $i; ?>" name="novo_vencimento" class="novo_vencimento" value="<?php echo $boletos->vencimento; ?>">
+                                            
+                                            
                                             
                                                 <?php } ?>
                                             <input type="hidden" id="hoje" class="hoje" name="hoje" value="<?php echo date('d/m/Y');?>">
