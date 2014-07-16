@@ -3,7 +3,7 @@
 session_start();
 
 include_once '../lib/functions.php';
-include_once '../lib/includes.php';
+//include_once '../lib/includes.php';
 include_once '../configuration.php';
 
 // Tratamento do CNPJ, tirando caracteres especiais

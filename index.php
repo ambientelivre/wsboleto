@@ -138,12 +138,6 @@ include 'lib/includes.php';
 
 <div id="container">
     
-    <?php
-        echo '<pre> server URL ==> ';
-        print_r(__VIEW_PATH__);
-        echo '</pre>';
-    ?>
-    
     <div id="titulo" style="margin: 20px auto 0 auto; width: 550px;">
         <img src="lib/imagens/titulo_emissao_ss.png" style="margin: 0 auto;">
     </div>

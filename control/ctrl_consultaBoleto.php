@@ -12,13 +12,13 @@ if($acao == '' && $acao != 'consultaBoleto' && $acao != 'linkBoleto'){
 }else{
 
     $consulta = $client->consultaBoleto($arr_lcto);
-        
+    
     if($consulta != null){
 
         $_SESSION['numerodocumento'] = $consulta->numerodocumento;
         $_SESSION['nossonumero'] = $consulta->nossonumero;
         $_SESSION['data'] = $consulta->data;
-        $_SESSION['sacado'] = $consulta->sacado;
+        $_SESSION['sacado'] = $consulta->sacado . ' ' . $consulta->cnpj_cpf;
         $_SESSION['banco'] = $consulta->banco;
         $_SESSION['municipio'] = $consulta->municipio;
         $_SESSION['uf'] = $consulta->uf;
