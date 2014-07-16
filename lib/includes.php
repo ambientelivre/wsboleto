@@ -1,13 +1,15 @@
 <?php
 
-define(__CONTROL_PATH__, 'http://www.ambientelivre.com.br/ws_cdc/control');
+include_once './configuration.php';
 
-define(__VIEW_PATH__, 'http://www.ambientelivre.com.br/ws_cdc/view');
+define(__CONTROL_PATH__, $SERVER_URL . 'ws_cdc/control');
 
-define(__LIB_PATH__, 'http://www.ambientelivre.com.br/ws_cdc/lib');
+define(__VIEW_PATH__, $SERVER_URL . 'ws_cdc/view');
 
-define(__BOLETOPHP_PATH__, 'http://www.ambientelivre.com.br/ws_cdc/lib/boleto_php/');
+define(__LIB_PATH__, $SERVER_URL . 'ws_cdc/lib');
 
-define(__PROJECT_PATH__, 'http://www.ambientelivre.com.br/ws_cdc/');
+define(__BOLETOPHP_PATH__, $SERVER_URL . 'ws_cdc/lib/boleto_php/');
+
+define(__PROJECT_PATH__, $SERVER_URL . 'ws_cdc/');
 
 ?>
