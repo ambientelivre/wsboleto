@@ -3,7 +3,7 @@
 if($acao == '' && $acao != 'autenticar' && $acao != 'captcha'){
     
      $_SESSION['error'] = true;
-     $_SESSION['error_msg'] = 'Usuário não autenticado';
+     $_SESSION['error_msg'] = 'CNPJ não autenticado';
      header ("location: " . __PROJECT_PATH__);
 
      exit();
@@ -24,7 +24,7 @@ if($acao == '' && $acao != 'autenticar' && $acao != 'captcha'){
 
   }else{      
      $_SESSION['error'] = true;
-     $_SESSION['error_msg'] = 'Usuário não autenticado';
+     $_SESSION['error_msg'] = 'CNPJ não autenticado';
      header ("location: " . __PROJECT_PATH__);
      exit();
   }

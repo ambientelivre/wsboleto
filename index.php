@@ -57,6 +57,15 @@ include 'lib/includes.php';
                alert('Campo CNPJ deve ter no mínimo 8 dígitos');
            }else if($('#cnpj').val().length === 8){
                
+           }else if($(this).val().length < 14 && $(this).val().length > 8){
+               var str = $(this).val();
+               var patt = /\b\d{2}[.]?\d{3}[.]?\d{3}\b/g; 
+               var result = patt.exec(str); 
+               
+               if(str != result){
+                   alert('Formato de CNPJ inválido.');
+               }
+               
            }else{
                ValidaCNPJ(this.value);
            };
