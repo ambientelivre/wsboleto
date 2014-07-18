@@ -120,7 +120,7 @@ include 'lib/includes.php';
    });
 </script>
 
-<!--<script type="text/javascript" src="lib/js/valida_CPF_CNPJ.js"></script>-->
+<script type="text/javascript" src="lib/js/valida_CPF_CNPJ.js"></script>
 
 <div id="container">
     

@@ -13,11 +13,11 @@ RENOMEIE ESTE ARQUIVO PARA: configuration.php
 
 // ADICIONE AQUI A URL DO SISTEMA ERP
 
-$SERVER_URL = 'http://www.ambientelivre.com.br/';
+$SERVER_URL = '';
 
-$CONFIG_URL = "http://200.195.141.44:30002/boletos/ws.php?wsdl";
+$CONFIG_URL = "";
 
-$NOME_PROJETO = 'ws_cdc/';
+$NOME_PROJETO = '/';
 
 
 //DEFINIÇÃO DE CONSTANTES DO PROJETO
