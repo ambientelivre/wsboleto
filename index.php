@@ -23,20 +23,22 @@ include 'lib/includes.php';
     
    $(document).ready(function(){
        
+//ESCONDE AS MENSAGENS DA TELA INICIAL
+       $('#submit').hide();
+       
+//       $('#p_cnpj').hide();
+       
         $('.sonums').keypress(function(event) {
             var tecla = (window.event) ? event.keyCode : event.which;
             if ((tecla > 47 && tecla < 58)) return true;
             else {
-                if (tecla != 8) return false;
-                else return true;
+                if (tecla != 8){
+                    return false;
+                } else {
+                    return true;
+                }
             }
         });
-       
-       $("#cnpj").mask("99.999.999/9999-99");
-       
-       $('#submit').hide();
-       
-       $('#p_cnpj').hide();
        
        $('#fechar').click(function (){
            $('#msg_error').slideUp();    
@@ -62,7 +64,7 @@ include 'lib/includes.php';
        
        
        $('#cnpj').focus(function(){
-           $(this).val('');
+//           $(this).val('');
            $('#info_cnpj').fadeIn();
            $(this).blur(function (){
                $('#info_cnpj').fadeOut();
@@ -72,7 +74,8 @@ include 'lib/includes.php';
        $('#cnpj').blur(function(){
             var cnpj = $('#cnpj').val();
             var nf = $('#lancamento').val();
-       
+            $('#p_cnpj').fadeOut();
+            
             if(cnpj != '' && nf != ''){
                 $('#submit').fadeIn();
             }else{

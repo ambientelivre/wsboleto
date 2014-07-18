@@ -33,7 +33,6 @@
 //INICIA SESSÃO
 session_start();
 
-
 // DADOS DO BOLETO PARA O SEU CLIENTE
 $dias_de_prazo_para_pagamento = 56;
 $taxa_boleto = 2.50;
@@ -50,7 +49,7 @@ $dadosboleto["data_processamento"] = date("d/m/Y"); // Data de processamento do 
 $dadosboleto["valor_boleto"] = $_SESSION['valor']; 	// Valor do Boleto - REGRA: Com v�rgula e sempre com duas casas depois da virgula
 
 // DADOS DO SEU CLIENTE
-$dadosboleto["sacado"] = $_SESSION['sacado'] . ' ' . $_SESSION['CNPJ'];
+$dadosboleto["sacado"] = $_SESSION['sacado'];
 $dadosboleto["endereco1"] = $_SESSION['endereco'];
 //$dadosboleto["endereco2"] = $_REQUEST['endereco_2_cliente'];
 $dadosboleto["endereco2"] = $_SESSION['municipio'] . " - ".  $_SESSION['uf'] . " - CEP: ". $_SESSION['cep'];
@@ -86,7 +85,7 @@ $dadosboleto["carteira"] = "181";  // C�digo da Carteira: pode ser 175, 174, 1
 
 // SEUS DADOS
 //$dadosboleto["identificacao"] = "BoletoPhp - Codigo Aberto de Sistema de Boletos";
-$dadosboleto["cpf_cnpj"] = "CNPJ da CDC";
+$dadosboleto["cpf_cnpj"] = $_SESSION['cnpj_empresa'];
 $dadosboleto["endereco"] = "Coloque o endereco da sua empresa aqui";
 $dadosboleto["cidade_uf"] = "Cidade / Estado";
 $dadosboleto["cedente"] = "Scan Source CDC Brasil";

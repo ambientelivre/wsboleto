@@ -13,6 +13,8 @@
 
 <?php session_start(); ?>
 
+<?php $_SESSION['cnpj_empresa'] = $_REQUEST['cnpj']; ?>
+
 <div id="container">
     
     <div id="titulo" style="margin: 20px auto 0 auto; width: 550px;">
@@ -60,6 +62,7 @@
             <th width="16.4%"></th>
 
               <?php
+              
                 $i=0;
                 foreach ($lista as $boletos){  ?>
             

@@ -12,7 +12,7 @@ if($acao == '' && $acao != 'listaBoletos'){
     
 }else if($acao_anterior == 'linkBoleto'){
     $lista = $client->listaBoletos($aux_array);
-    
+        
         foreach ($lista as $bl){
                 
         if($bl->id == $aux_array['id']){
@@ -44,7 +44,6 @@ if($acao == '' && $acao != 'listaBoletos'){
 }else{
     $lista = $client->listaBoletos($aux_array);
 
-    
     if($lista != null){
         include '../view/view_listaBoletos.php';
         exit();
