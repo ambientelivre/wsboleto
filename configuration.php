@@ -17,16 +17,16 @@ $SERVER_URL = '';
 
 $CONFIG_URL = "";
 
-$NOME_PROJETO = '/';
+$NOME_PROJETO = '';
 
 
 //DEFINIÇÃO DE CONSTANTES DO PROJETO
 
-define(__CONTROL_PATH__, $SERVER_URL . $NOME_PROJETO . 'control');
+define(__CONTROL_PATH__, $SERVER_URL . $NOME_PROJETO . '/control');
 
-define(__VIEW_PATH__, $SERVER_URL . $NOME_PROJETO . 'view');
+define(__VIEW_PATH__, $SERVER_URL . $NOME_PROJETO . '/view');
 
-define(__LIB_PATH__, $SERVER_URL . $NOME_PROJETO . 'lib');
+define(__LIB_PATH__, $SERVER_URL . $NOME_PROJETO . '/lib');
 
 define(__BOLETOPHP_PATH__, $SERVER_URL . $NOME_PROJETO .  '/lib/boleto_php/');
 
