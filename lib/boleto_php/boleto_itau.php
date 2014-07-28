@@ -58,17 +58,24 @@ $dadosboleto["endereco2"] = $_SESSION['municipio'] . " - ".  $_SESSION['uf'] . "
 //$dadosboleto["demonstrativo1"] = "Pagamento de Compra na Loja Nonononono";
 //$dadosboleto["demonstrativo2"] = "Mensalidade referente a nonon nonooon nononon<br>Taxa banc�ria - R$ ".number_format($taxa_boleto, 2, ',', '');
 //$dadosboleto["demonstrativo3"] = "BoletoPhp - http://www.boletophp.com.br";
-$dadosboleto["instrucoes1"] = $_SESSION['instrucoes'];
-$dadosboleto["instrucoes2"] = "- Pagamento pode ser realizado até " . $_SESSION['vencimento'];
-$dadosboleto["instrucoes3"] = "- Em caso de dúvidas entre em contato conosco: cobranca@scansource.com.br";
-$dadosboleto["instrucoes4"] = "&nbsp; TELEFONE COBRANCA ( 41 ) 2169-6500 PROTESTAR AP&Oacute;S 10 DIAS VENCIDO";
+//$dadosboleto["instrucoes1"] = $_SESSION['instrucoes'];
+$dadosboleto["instrucoes1"] = 'BOLETO ORIGINAL: ';
+
+$nnrd = substr($_SESSION['nossonumero'],3);
+$nn3d = substr($_SESSION['nossonumero'], 0,3);
+$nn = $nn3d . '/' . $nnrd;
+
+$dadosboleto["instrucoes2"] = $nn . ". VCTO " . $_SESSION['vencimento'] . " NO VALOR DE R$..." . $_SESSION['valor'] . "</br> Pagamento pode ser realizado até: " . $_SESSION['vencimento'];
+$dadosboleto["instrucoes3"] = "Em caso de dúvida contatar: cobranca@scansource.com.br - Telefone cobrança (41)2169-6500";
+$dadosboleto["instrucoes4"] = "Protestar após 10 dias vencido</br>Juros por dia de atraso: R$" . $_SESSION['outrosacrescimos'] . "</br>Multa de: R$" . $_SESSION['multa'];
+
 
 // DADOS OPCIONAIS DE ACORDO COM O BANCO OU CLIENTE
 //$dadosboleto["quantidade"] = "";
 //$dadosboleto["valor_unitario"] = "";
-//$dadosboleto["aceite"] = "";		
-//$dadosboleto["especie"] = "R$";
-//$dadosboleto["especie_doc"] = "";
+$dadosboleto["aceite"] = "N";		
+$dadosboleto["especie"] = "R$";
+$dadosboleto["especie_doc"] = "DMI";
 
 
 // ---------------------- DADOS FIXOS DE CONFIGURA��O DO SEU BOLETO --------------- //
@@ -88,7 +95,7 @@ $dadosboleto["carteira"] = "181";  // C�digo da Carteira: pode ser 175, 174, 1
 $dadosboleto["cpf_cnpj"] = $_SESSION['cnpj_empresa'];
 $dadosboleto["endereco"] = "Coloque o endereco da sua empresa aqui";
 $dadosboleto["cidade_uf"] = "Cidade / Estado";
-$dadosboleto["cedente"] = "Scan Source CDC Brasil";
+$dadosboleto["cedente"] = "CDC BRASIL DISTRIBUIDORA DE TECNOLOGIA ESPECIAIS LTDA.";
 
 // N�O ALTERAR!
 include("include/funcoes_itau.php"); 

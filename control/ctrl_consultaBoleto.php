@@ -30,8 +30,8 @@ if($acao == '' && $acao != 'consultaBoleto' && $acao != 'linkBoleto'){
         $_SESSION['valor'] = $valor;
         $_SESSION['desconto'] = $consulta->desconto;
         $_SESSION['outrasdeducoes'] = $consulta->outrasdeducoes;
-        $_SESSION['outrosacrescimos'] = acrescimos($consulta->outrosacrescimos);
-        $_SESSION['multa'] = acrescimos($consulta->multa);
+        $_SESSION['outrosacrescimos'] = $consulta->outrosacrescimos;
+        $_SESSION['multa'] = $consulta->multa;
     //    $_SESSION['vencimento'] = $consulta->vencimento;
         if($acao_anterior == 'linkBoleto'){
             $_SESSION['vencimento'] = $consulta->data;
@@ -40,7 +40,6 @@ if($acao == '' && $acao != 'consultaBoleto' && $acao != 'linkBoleto'){
         }
         
         $_SESSION['instrucoes'] = $consulta->instrucoes;
-        
         
         if($consulta->banco == '001'){
             header ("location: " . __LIB_PATH__ . "/boleto_php/boleto_bb.php");

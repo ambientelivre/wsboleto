@@ -6,7 +6,7 @@ require_once '../lib/includes.php';
 if($acao == '' && $acao != 'listaBoletos'){
     
      $_SESSION['error'] = true;
-     $_SESSION['error_msg'] = 'Usuário não autenticado';
+     $_SESSION['error_msg'] = 'Não localizado boleto.';
      header ("location: " . __PROJECT_PATH__);
      exit();
     
@@ -50,7 +50,7 @@ if($acao == '' && $acao != 'listaBoletos'){
 
     }else{    
         $_SESSION['error'] = true;
-        $_SESSION['error_msg'] = 'Cliente' . ' não possui boletos.';
+        $_SESSION['error_msg'] = 'Cliente' . ' não possui boletos para Nota Fiscal.' . $aux_array['lancamento'];
         header ("location: " . __PROJECT_PATH__);
 
         exit();
