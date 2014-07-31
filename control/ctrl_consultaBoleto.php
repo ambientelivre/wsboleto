@@ -11,8 +11,8 @@ if($acao == '' && $acao != 'consultaBoleto' && $acao != 'linkBoleto'){
     
 }else{
 
-    $consulta = $client->consultaBoleto($arr_lcto);    
-    
+    $consulta = $client->consultaBoleto($arr_lcto);   
+            
     if($consulta != null){
         
         $_SESSION['numerodocumento'] = $consulta->numerodocumento;
@@ -25,7 +25,8 @@ if($acao == '' && $acao != 'consultaBoleto' && $acao != 'linkBoleto'){
         $_SESSION['cep'] = $consulta->cep;
         $_SESSION['endereco'] = $consulta->endereco;
 
-        $valor = insereVirgula($consulta->valor);
+//        $valor = insereVirgula($consulta->valor);
+        $valor = $consulta->valor;
 
         $_SESSION['valor'] = $valor;
         $_SESSION['desconto'] = $consulta->desconto;

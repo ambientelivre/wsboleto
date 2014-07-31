@@ -6,7 +6,7 @@ require_once '../lib/includes.php';
 if($acao == '' && $acao != 'listaBoletos'){
     
      $_SESSION['error'] = true;
-     $_SESSION['error_msg'] = 'Não localizado boleto.';
+     $_SESSION['error_msg'] = 'Não localizado boleto.</br>Entre em contato conosco: cobranca@scansource.com.br Telefone cobrança (41) 2169-6500';
      header ("location: " . __PROJECT_PATH__);
      exit();
     

@@ -42,7 +42,7 @@ $valor_cobrado = str_replace(",", ".",$valor_cobrado);
 $valor_boleto=number_format($valor_cobrado+$taxa_boleto, 2, ',', '');
 
 $dadosboleto["nosso_numero"] = $_SESSION['nossonumero'];  // Nosso numero - REGRA: M�ximo de 8 caracteres!
-$dadosboleto["numero_documento"] = $_SESSION['numerodocumento'];	// Num do pedido ou nosso numero
+$dadosboleto["numero_documento"] = $_SESSION['numerodocumento']; // Num do pedido ou nosso numero
 $dadosboleto["data_vencimento"] = $_SESSION['vencimento']; // Data de Vencimento do Boleto - REGRA: Formato DD/MM/AAAA
 $dadosboleto["data_documento"] = date("d/m/Y"); // Data de emiss�o do Boleto
 $dadosboleto["data_processamento"] = date("d/m/Y"); // Data de processamento do boleto (opcional)
@@ -88,7 +88,7 @@ $dadosboleto["conta_dv"] = "5"; 	// Digito do Num da conta
 
 // DADOS PERSONALIZADOS - ITA�
 //$dadosboleto["carteira"] = "175";  // C�digo da Carteira: pode ser 175, 174, 104, 109, 178, ou 157
-$dadosboleto["carteira"] = "181";  // C�digo da Carteira: pode ser 175, 174, 104, 109, 178, ou 157
+$dadosboleto["carteira"] = "109";  // C�digo da Carteira: pode ser 175, 174, 104, 109, 178, ou 157
 
 // SEUS DADOS
 //$dadosboleto["identificacao"] = "BoletoPhp - Codigo Aberto de Sistema de Boletos";

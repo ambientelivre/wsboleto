@@ -36,7 +36,7 @@ include 'lib/includes.php';
 </div>
 
 <div id="container">
-    
+        
     <div id="titulo" style="margin: 20px auto 0 auto; width: 550px;">
         <img src="lib/imagens/titulo_emissao_ss.png" style="margin: 0 auto;">
     </div>
